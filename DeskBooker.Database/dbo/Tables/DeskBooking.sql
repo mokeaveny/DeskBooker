@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[DeskBooking]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[FirstName] NVARCHAR(35),
+	[LastName] NVARCHAR(35),
+	[Email] NVARCHAR(254),
+	[Date] DATETIME NOT NULL,
+	[DeskId] INT NOT NULL,
+	CONSTRAINT FK_DeskBooking_DeskId FOREIGN KEY (DeskId) REFERENCES [dbo].[Desk] (Id)
+	ON DELETE CASCADE
+)
