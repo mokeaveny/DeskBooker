@@ -18,6 +18,17 @@ namespace DeskBooker.DataAccess.Repository
             this.db = db;
         }
 
+        public async Task<List<Desk>> GetAllDesks()
+        {
+            var procedureName = "dbo.Desk_Get_All";
+            var parameters = new DynamicParameters();
+
+            List<Desk> desks = (await db.QueryAsync<Desk>
+                (procedureName, commandType: CommandType.StoredProcedure)).ToList();
+
+            return desks;
+        }
+
         public async Task<List<Desk>> GetAvailableDesks(DateTime date)
         {
             var procedureName = "dbo.Desk_Get_ForAvailableDeskBookingDate";

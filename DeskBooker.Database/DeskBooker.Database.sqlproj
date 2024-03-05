@@ -67,6 +67,7 @@
     <Build Include="dbo\StoredProcedures\DeskBooking_Delete.sql" />
     <Build Include="dbo\Tables\Desk.sql" />
     <Build Include="dbo\StoredProcedures\Desk_Get_ForAvailableDeskBookingDate.sql" />
+    <Build Include="dbo\StoredProcedures\Desk_Get_All.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\Script.PostDeployment.sql" />

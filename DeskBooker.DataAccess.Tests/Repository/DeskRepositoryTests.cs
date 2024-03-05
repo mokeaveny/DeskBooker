@@ -29,5 +29,15 @@ namespace DeskBooker.DataAccess.Tests.Repository
             Assert.Contains(desks, d => d.Id == 2);
             Assert.DoesNotContain(desks, d => d.Id == 3);
         }
+
+        [Fact]
+        public async void ShouldGetAll()
+        {
+            // Act
+            List<Desk> desks = await this.deskRepository.GetAllDesks();
+
+            // Assert
+            Assert.Equal(3, desks.Count());
+        }
     }
 }

@@ -40,8 +40,8 @@ namespace DeskBooker.DataAccess.Tests.Repository
         public async void ShouldDeleteDeskBooking()
         {
             // Act
-            await this.deskBookingRepository.DeleteDeskBooking(1);
-            DeskBooking retrievedDeskBooking = await this.deskBookingRepository.GetDeskBooking(1);
+            await this.deskBookingRepository.DeleteDeskBooking(8);
+            DeskBooking retrievedDeskBooking = await this.deskBookingRepository.GetDeskBooking(8);
 
             // Assert
             Assert.Null(retrievedDeskBooking);
