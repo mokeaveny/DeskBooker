@@ -1,10 +1,11 @@
 ﻿using Dapper;
+using DeskBooker.Core.DataInterface;
 using DeskBooker.Core.Domain;
 using System.Data;
 
 namespace DeskBooker.DataAccess.Repository
 {
-    public class DeskBookingRepository
+    public class DeskBookingRepository : IDeskBookingRepository
     {
         private readonly IDbConnection db;
 

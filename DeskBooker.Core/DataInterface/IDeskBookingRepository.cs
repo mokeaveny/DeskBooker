@@ -4,6 +4,7 @@ namespace DeskBooker.Core.DataInterface
 {
     public interface IDeskBookingRepository
     {
-        void Save(DeskBooking deskBooking);
+        Task InsertDeskBooking(DeskBooking deskBooking);
+        Task<DeskBooking> GetDeskBooking(int id);
     }
 }

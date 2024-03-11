@@ -58,7 +58,7 @@ namespace DeskBooker.Core.Processor
         {
             // Arrange
             DeskBooking savedDeskBooking = null;
-            deskBookingRepositoryMock.Setup(x => x.Save(It.IsAny<DeskBooking>()))
+            deskBookingRepositoryMock.Setup(x => x.InsertDeskBooking(It.IsAny<DeskBooking>()))
                 .Callback<DeskBooking>(deskBooking =>
                 {
                     savedDeskBooking = deskBooking;
@@ -67,7 +67,7 @@ namespace DeskBooker.Core.Processor
             // Act
             processor.BookDesk(request);
 
-            deskBookingRepositoryMock.Verify(x => x.Save(It.IsAny<DeskBooking>()), Times.Once);
+            deskBookingRepositoryMock.Verify(x => x.InsertDeskBooking(It.IsAny<DeskBooking>()), Times.Once);
 
             // Assert
             Assert.NotNull(savedDeskBooking);
@@ -86,7 +86,7 @@ namespace DeskBooker.Core.Processor
             // Act
             processor.BookDesk(request);
 
-            deskBookingRepositoryMock.Verify(x => x.Save(It.IsAny<DeskBooking>()), Times.Never);
+            deskBookingRepositoryMock.Verify(x => x.InsertDeskBooking(It.IsAny<DeskBooking>()), Times.Never);
         }
 
         [Theory]
@@ -117,7 +117,7 @@ namespace DeskBooker.Core.Processor
             }
             else
             {
-                deskBookingRepositoryMock.Setup(x => x.Save(It.IsAny<DeskBooking>()))
+                deskBookingRepositoryMock.Setup(x => x.InsertDeskBooking(It.IsAny<DeskBooking>()))
                     .Callback<DeskBooking>(deskBooking =>
                     {
                         deskBooking.Id = expectedDeskBookingId.Value;

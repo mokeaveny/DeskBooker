@@ -28,7 +28,7 @@ namespace DeskBooker.Core.Processor
                 DeskBooking deskBooking = Create<DeskBooking>(request);
                 deskBooking.DeskId = availableDesk.Id;
 
-                deskBookingRepository.Save(deskBooking);
+                deskBookingRepository.InsertDeskBooking(deskBooking);
 
                 deskBookingResult.DeskBookingId = deskBooking.Id;
                 deskBookingResult.Code = DeskBookingResultCode.Success;
