@@ -15,6 +15,17 @@ namespace DeskBooker.DataAccess.Controllers
         }
 
         [HttpGet]
+        public ActionResult<List<Desk>> GetAllDesks()
+        {
+            List<Desk> desks = deskRepository.GetAllDesks();
+            if (desks == null)
+            {
+                return NotFound();
+            }
+            return Ok(desks);
+        }
+
+        [HttpGet]
         public ActionResult<List<Desk>> GetAvailableDesks(DateTime date)
         {
             List<Desk> desks = deskRepository.GetAvailableDesks(date);
