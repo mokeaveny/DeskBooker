@@ -1,7 +1,10 @@
+using DeskBooker.Web.Integrations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<IDeskBookerDataAccessApiClient, DeskBookerDataAccessApiClient>();
 
 var app = builder.Build();
 

@@ -17,7 +17,6 @@ namespace DeskBooker.DataAccess.Repository
         public List<Desk> GetAllDesks()
         {
             var procedureName = "dbo.Desk_Get_All";
-            var parameters = new DynamicParameters();
 
             List<Desk> desks = (db.Query<Desk>
                 (procedureName, commandType: CommandType.StoredProcedure)).ToList();
