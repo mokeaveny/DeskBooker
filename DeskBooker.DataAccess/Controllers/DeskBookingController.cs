@@ -24,5 +24,11 @@ namespace DeskBooker.DataAccess.Controllers
             }
             return Ok(deskBooking);
         }
+
+        [HttpPost]
+        public async Task Post(DeskBooking deskBooking)
+        {
+            await deskBookingRepository.InsertDeskBooking(deskBooking);
+        }
     }
 }
