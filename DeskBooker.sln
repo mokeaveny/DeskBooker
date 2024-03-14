@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{68EC90DD-190A-460E-A4C4-D63FB45DEA5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.Core.Tests", "DeskBooker.Core.Tests\DeskBooker.Core.Tests.csproj", "{68EC90DD-190A-460E-A4C4-D63FB45DEA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Core", "DeskBooker.Core\DeskBooker.Core.csproj", "{C9080EC5-0F83-4068-869A-D406DCE536F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.Core", "DeskBooker.Core\DeskBooker.Core.csproj", "{C9080EC5-0F83-4068-869A-D406DCE536F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.DataAccess.Tests", "DeskBooker.DataAccess.Tests\DeskBooker.DataAccess.Tests.csproj", "{990E9A99-DEB4-4BE5-895C-06DE50FDFC04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.DataAccess.Tests", "DeskBooker.DataAccess.Tests\DeskBooker.DataAccess.Tests.csproj", "{990E9A99-DEB4-4BE5-895C-06DE50FDFC04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.DataAccess", "DeskBooker.DataAccess\DeskBooker.DataAccess.csproj", "{C4C08DDE-144C-4C29-A6B2-6EA1D176604B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.DataAccess", "DeskBooker.DataAccess\DeskBooker.DataAccess.csproj", "{C4C08DDE-144C-4C29-A6B2-6EA1D176604B}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DeskBooker.Database", "DeskBooker.Database\DeskBooker.Database.sqlproj", "{72DB45E9-C67A-4B7C-99F0-60285F487C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Web", "DeskBooker.Web\DeskBooker.Web.csproj", "{E076A213-3679-4F3D-B30D-96A0A107F4DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBooker.Web", "DeskBooker.Web\DeskBooker.Web.csproj", "{E076A213-3679-4F3D-B30D-96A0A107F4DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBooker.Web.Tests", "DeskBooker.Web.Tests\DeskBooker.Web.Tests.csproj", "{6D281D6D-D83A-4CFC-B12F-4DBBBC77540C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{E076A213-3679-4F3D-B30D-96A0A107F4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E076A213-3679-4F3D-B30D-96A0A107F4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E076A213-3679-4F3D-B30D-96A0A107F4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D281D6D-D83A-4CFC-B12F-4DBBBC77540C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D281D6D-D83A-4CFC-B12F-4DBBBC77540C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D281D6D-D83A-4CFC-B12F-4DBBBC77540C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D281D6D-D83A-4CFC-B12F-4DBBBC77540C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
