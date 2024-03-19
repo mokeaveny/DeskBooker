@@ -6,5 +6,6 @@ namespace DeskBooker.Core.DataInterface
     {
         Task InsertDeskBooking(DeskBooking deskBooking);
         Task<DeskBooking> GetDeskBooking(int id);
+        Task<List<DeskBooking>> GetAllDeskBookings();
     }
 }

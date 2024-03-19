@@ -23,5 +23,11 @@ namespace DeskBooker.Web.Integrations
             var requestUri = "Desk/GetAvailableDesks?date=" + date;
             return await httpClient.GetFromJsonAsync<List<Desk>>(requestUri);
         }
+
+        public async Task<List<DeskBooking>> GetAllDeskBookings()
+        {
+            var requestUri = "DeskBooking/GetAllDeskBookings";
+            return await httpClient.GetFromJsonAsync<List<DeskBooking>>(requestUri);
+        }
     }
 }

@@ -39,6 +39,16 @@ namespace DeskBooker.DataAccess.Repository
             return deskBooking;
         }
 
+        public async Task<List<DeskBooking>> GetAllDeskBookings()
+        {
+            var procedureName = "dbo.DeskBooking_GetAll";
+
+            List<DeskBooking> deskBookings = (db.Query<DeskBooking>
+                (procedureName, commandType: CommandType.StoredProcedure)).ToList();
+
+            return deskBookings;
+        }
+
         public async Task DeleteDeskBooking(int id)
         {
             var procedureName = "dbo.DeskBooking_Delete";

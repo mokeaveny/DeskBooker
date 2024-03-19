@@ -25,6 +25,17 @@ namespace DeskBooker.DataAccess.Controllers
             return Ok(deskBooking);
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<DeskBooking>>> GetAllDeskBookings()
+        {
+            List<DeskBooking> deskBookings = await deskBookingRepository.GetAllDeskBookings();
+            if (deskBookings == null)
+            {
+                return NotFound();
+            }
+            return Ok(deskBookings);
+        }
+
         [HttpPost]
         public async Task Post(DeskBooking deskBooking)
         {

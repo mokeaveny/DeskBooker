@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\DeskBookings.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DeskBooker.Core\DeskBooker.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\DeskBookings.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\DeskBookings.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\DeskBookings.cshtml" />
   </ItemGroup>
 
 </Project>

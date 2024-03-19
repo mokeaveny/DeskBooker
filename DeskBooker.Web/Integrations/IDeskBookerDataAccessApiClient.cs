@@ -6,5 +6,6 @@ namespace DeskBooker.Web.Integrations
     {
         Task<List<Desk>> GetAllDesks();
         Task<List<Desk>> GetAvailableDesks(DateTime date);
+        Task<List<DeskBooking>> GetAllDeskBookings();
     }
 }
